@@ -1,0 +1,9 @@
+Package: com.hush.bluedhush.re
+Name: BluedHush Original (RE)
+Version: 5.19.0
+Architecture: iphoneos-arm
+Description: Recovered source tree of BluedHush 5.19 (76 classes / 1015 methods / 309 hooks).
+Maintainer: REA
+Author: REA
+Section: Tweaks
+Depends: mobilesubstrate

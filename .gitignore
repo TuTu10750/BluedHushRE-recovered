@@ -1,0 +1,13 @@
+# build artifacts
+.theos/
+packages/
+obj/
+*.deb
+*.dSYM/
+
+# python
+__pycache__/
+*.pyc
+
+# local
+*.log
