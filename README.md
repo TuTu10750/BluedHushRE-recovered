@@ -81,8 +81,8 @@ Makefile    直接 make 即可（TARGET iphone:clang:latest:14.0，ARCHS arm64 a
 `check_dylib.py` 对编译产物的校验结果：
 
 ```text
-size            890,000
-cputype         arm64
+size            897,344
+cputype         arm64 (thin)
 filetype        6 (MH_DYLIB)
 substrate       NONE  (self-signed / LiveContainer safe)
 classlist       76 classes (expect 76) [OK]
@@ -93,6 +93,9 @@ __objc_selrefs  0x4290
 hook shim       MSHookMessageEx present in image
 ALL CHECKS PASSED — deployable without substrate
 ```
+
+这是 **arm64 thin** 二进制。arm64e 设备（A12 及以后，iOS 27 全部）可正常加载 arm64 用户态
+dylib，所以单架构足够；若要双架构，`make ARCHS="arm64 arm64e"` 重编即可。
 
 ## 自行构建
 
